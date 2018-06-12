@@ -22,8 +22,7 @@ fs.readFile('hello.txt', 'utf8', (error, content) =>
     .forEach(line => console.log(line))
 )
 
-hello.txt
-
+//hello.txt
 fluffykins is a dragon
 wolfbane is a dragon
 kittylunch is a cat
@@ -31,7 +30,6 @@ karo is a dog
 multidog is a dog
 
 Ты можете интерактивно генерировать файл package.json с помощью команды npm init в терминале. После запуска команды вас попросят ввести некоторые данные, например имя вашего приложения, версию, описание и так далее. Не нужно беспокоиться, просто нажимайте Enter, пока не получите сформированный JSON и вопрос is it ok?. Нажмите Enter в последний раз и вуаля: ваш package.json был автоматически сгенерирован и помещен в папку вашего приложения.
-
 
 // index.js
 require('./app/server')
