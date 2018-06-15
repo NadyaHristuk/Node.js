@@ -1,3 +1,4 @@
+[![Node](Node "Node")](https://github.com/NadyaHristuk/Node.js/blob/master/nodehero.jpg "Node")
 # Node.js
 #### ## Перечень тем на курсе:Перечень тем на курсе:
 ##### День 1
