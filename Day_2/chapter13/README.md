@@ -1,7 +1,4 @@
 # Мониторинг Node.js-приложений
-*Перевод книги [Node Hero](https://risingstack.com/resources/node-hero) от [RisingStack](https://risingstack.com/). Переведено с разрешения правообладателей.*
-
-В последней главе этого учебника я расскажу вам, как настроить мониторинг Node.js и как найти важнейшие проблемы в продакшен-среде.
 
 ## Важность мониторинга Node.js
 
@@ -106,14 +103,4 @@
 
 Вот и всё.
 
-За время чтения 13 глав Node Hero вы изучили основы построения отличных приложений с помощью Node.js.
 
-**Надеюсь, вам понравилось и вы стали лучше разбираться в Node.js**! Пожалуйста, поделитесь этим учебником с друзьями, если вы считаете, что им это тоже нужно, и покажите им Trace. Это отличный инструмент для разработки на Node.js!
-
-Если вы хотите продолжить совершенствование своих навыков Node.js-разработчика, рекомендуем наш новый учебник [Node.js at Scale](https://blog.risingstack.com/nodejs-at-scale-npm-best-practices/)!
-
----
-
-*Слушайте наш подкаст в [iTunes](https://itunes.apple.com/ru/podcast/девшахта/id1226773343) и [SoundCloud](https://soundcloud.com/devschacht), читайте нас на [Medium](https://medium.com/devschacht), контрибьютьте на [GitHub](https://github.com/devSchacht), общайтесь в [группе Telegram](https://t.me/devSchacht), следите в [Twitter](https://twitter.com/DevSchacht) и [канале Telegram](https://t.me/devSchachtChannel), рекомендуйте в [VK](https://vk.com/devschacht) и [Facebook](https://www.facebook.com/devSchacht).*
-
-[Глава на Medium](https://medium.com/devschacht/node-hero-chapter-13-d76531f4d0f3)

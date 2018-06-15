@@ -1,7 +1,4 @@
 # Отладка
-*Перевод книги [Node Hero](https://risingstack.com/resources/node-hero) от [RisingStack](https://risingstack.com/). Переведено с разрешения правообладателей.*
-
-В этой главе вы узнаете, как отлаживать Node.js-приложения с помощью модуля `debug`, встроенного отладчика Node.js и инструментов разработчика в Chrome.
 
 ## Баги и дебаггинг
 
@@ -110,11 +107,3 @@ node-debug index.js --debug-brk
 *Примечание переводчика: начиная с Node.js 6, интеграция с Chrome DevTools встроена в ядро. Для отладки необходимо запустить приложение с ключом `--inspect`.*
 
 ---
-
-В следующей главе Node Hero вы узнаете, **как защитить ваши Node.js-приложения**.
-
----
-
-*Слушайте наш подкаст в [iTunes](https://itunes.apple.com/ru/podcast/девшахта/id1226773343) и [SoundCloud](https://soundcloud.com/devschacht), читайте нас на [Medium](https://medium.com/devschacht), контрибьютьте на [GitHub](https://github.com/devSchacht), общайтесь в [группе Telegram](https://t.me/devSchacht), следите в [Twitter](https://twitter.com/DevSchacht) и [канале Telegram](https://t.me/devSchachtChannel), рекомендуйте в [VK](https://vk.com/devschacht) и [Facebook](https://www.facebook.com/devSchacht).*
-
-[Глава на Medium](https://medium.com/devschacht/node-hero-chapter-10-60b08a3a2f82)

@@ -1,7 +1,4 @@
 # Модульное тестирование
-*Перевод книги [Node Hero](https://risingstack.com/resources/node-hero) от [RisingStack](https://risingstack.com/). Переведено с разрешения правообладателей.*
-
-В этой главе вы узнаете, что такое модульное тестирование (*юнит-тестирование*) в Node.js и как правильно тестировать ваши приложения.
 
 ## Тестирование Node.js-приложений
 
@@ -237,11 +234,3 @@ istanbul cover _mocha $(find ./lib -name \"*.spec.js\" -not -path \"./node_modul
 Вы можете кликнуть мышью и на самом деле увидеть, что ваш исходный код аннотирован: какая часть протестирована, а какая — нет.
 
 ---
-
-Тестирование может уберечь вас от множества неприятностей. Тем не менее, неизбежно наступает время отладки. В следующей главе Node Hero вы узнаете, **как отлаживать Node.js-приложения**.
-
----
-
-*Слушайте наш подкаст в [iTunes](https://itunes.apple.com/ru/podcast/девшахта/id1226773343) и [SoundCloud](https://soundcloud.com/devschacht), читайте нас на [Medium](https://medium.com/devschacht), контрибьютьте на [GitHub](https://github.com/devSchacht), общайтесь в [группе Telegram](https://t.me/devSchacht), следите в [Twitter](https://twitter.com/DevSchacht) и [канале Telegram](https://t.me/devSchachtChannel), рекомендуйте в [VK](https://vk.com/devschacht) и [Facebook](https://www.facebook.com/devSchacht).*
-
-[Глава на Medium](https://medium.com/devschacht/node-hero-chapter-9-68041507aec)

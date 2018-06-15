@@ -1,7 +1,4 @@
 # Файловая структура проекта
-*Перевод книги [Node Hero](https://risingstack.com/resources/node-hero) от [RisingStack](https://risingstack.com/). Переведено с разрешения правообладателей.*
-
-Большинство Node.js-фреймворков не имеют фиксированной структуры каталогов и может быть непросто с самого начала проекта придерживаться правильной структуры. В этой главе вы узнаете, как правильно структурировать проект на Node.js, чтобы избежать сложностей, когда ваши приложения начнут расти.
 
 ## 5 основных правил структурирования проектов
 
@@ -115,11 +112,3 @@ module.exports = {
 ```
 
 ---
-
-В следующей главе Node Hero вы узнаете, **как аутентифицировать пользователей, используя Passport.js.**
-
----
-
-*Слушайте наш подкаст в [iTunes](https://itunes.apple.com/ru/podcast/девшахта/id1226773343) и [SoundCloud](https://soundcloud.com/devschacht), читайте нас на [Medium](https://medium.com/devschacht), контрибьютьте на [GitHub](https://github.com/devSchacht), общайтесь в [группе Telegram](https://t.me/devSchacht), следите в [Twitter](https://twitter.com/DevSchacht) и [канале Telegram](https://t.me/devSchachtChannel), рекомендуйте в [VK](https://vk.com/devschacht) и [Facebook](https://www.facebook.com/devSchacht).*
-
-[Глава на Medium](https://medium.com/devschacht/node-hero-chapter-7-4078fa61ece6)
