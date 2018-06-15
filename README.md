@@ -1,4 +1,4 @@
-![Иллюстрация к проекту](Node.js/nodehero.jpg)
+![Иллюстрация к проекту](https://raw.githubusercontent.com/NadyaHristuk/Node.js/master/nodehero.jpg)
 
 # Node.js
 #### ## Перечень тем на курсе:Перечень тем на курсе:
