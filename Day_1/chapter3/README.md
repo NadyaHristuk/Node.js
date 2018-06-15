@@ -1,9 +1,5 @@
 # Понимание асинхронного программирования
 
-*Перевод книги [Node Hero](https://risingstack.com/resources/node-hero) от [RisingStack](https://risingstack.com/). Переведено с разрешения правообладателей.*
-
-В этой главе я расскажу вам о принципах асинхронного программирования и покажу, как создавать асинхронные операции в JavaScript и Node.js.
-
 ## Синхронное программирование
 
 В традиционной практике программирования большинство операций ввода-вывода происходит синхронно. Если вы задумайтесь о Java и о том, как вы читаете файл в ней, вы получите что-то вроде этого:
@@ -185,6 +181,3 @@ Promise.all([
 
 ---
 
-*Слушайте наш подкаст в [iTunes](https://itunes.apple.com/ru/podcast/девшахта/id1226773343) и [SoundCloud](https://soundcloud.com/devschacht), читайте нас на [Medium](https://medium.com/devschacht), контрибьютьте на [GitHub](https://github.com/devSchacht), общайтесь в [группе Telegram](https://t.me/devSchacht), следите в [Twitter](https://twitter.com/DevSchacht) и [канале Telegram](https://t.me/devSchachtChannel), рекомендуйте в [VK](https://vk.com/devschacht) и [Facebook](https://www.facebook.com/devSchacht).*
-
-[Глава на Medium](https://medium.com/devschacht/node-hero-chapter-3-cae7333c7f3d)

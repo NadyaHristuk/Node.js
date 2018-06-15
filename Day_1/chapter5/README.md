@@ -1,7 +1,4 @@
 # Работа с базами данных
-*Перевод книги [Node Hero](https://risingstack.com/resources/node-hero) от [RisingStack](https://risingstack.com/). Переведено с разрешения правообладателей.*
-
-В следующей главе я покажу вам, как вы можете настроить приложение Node.js для работы с базой данных и научу вас основам её использования.
 
 ## Хранение данных в глобальной переменной
 
@@ -195,11 +192,3 @@ app.get('/users', function (req, res, next {
 Мы рассмотрели все основы, которые вы должны знать об использовании баз данных в Node.js. Теперь попробуйте создать что-то самостоятельно.
 
 ---
-
-Пробуйте всё и экспериментируйте, потому что это лучший способ стать настоящим героем Node.js! Практикуйтесь и будьте готовы к следующей главе о том,  **как общаться со сторонними API**!
-
----
-
-*Слушайте наш подкаст в [iTunes](https://itunes.apple.com/ru/podcast/девшахта/id1226773343) и [SoundCloud](https://soundcloud.com/devschacht), читайте нас на [Medium](https://medium.com/devschacht), контрибьютьте на [GitHub](https://github.com/devSchacht), общайтесь в [группе Telegram](https://t.me/devSchacht), следите в [Twitter](https://twitter.com/DevSchacht) и [канале Telegram](https://t.me/devSchachtChannel), рекомендуйте в [VK](https://vk.com/devschacht) и [Facebook](https://www.facebook.com/devSchacht).*
-
-[Глава на Medium](https://medium.com/devschacht/node-hero-chapter-5-dd79607858f2)

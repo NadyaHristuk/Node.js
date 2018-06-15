@@ -1,9 +1,5 @@
 # Использование NPM
 
-*Перевод книги [Node Hero](https://risingstack.com/resources/node-hero) от [RisingStack](https://risingstack.com/). Переведено с разрешения правообладателей.*
-
-В этой главе вы узнаете, что такое NPM и как его использовать. Давайте приступим к изучению!
-
 ## NPM в двух словах
 
 NPM — это менеджер пакетов, используемый Node.js-приложениями. В нём вы можете найти массу готовых модулей, поэтому вам не нужно изобретать колесо. Это похоже на Maven для Java или Composer для PHP. Существует два основных интерфейса, с которыми вы будете взаимодействовать: сайт NPM и набор инструментов командной строки (CLI).
@@ -134,7 +130,3 @@ require('@myorg/mypackage')
 *Для получения большей информации обратитесь к [документации NPM-модулей с ограниченной областью видимости](https://docs.npmjs.com/misc/scope).*
 
 ---
-
-*Слушайте наш подкаст в [iTunes](https://itunes.apple.com/ru/podcast/девшахта/id1226773343) и [SoundCloud](https://soundcloud.com/devschacht), читайте нас на [Medium](https://medium.com/devschacht), контрибьютьте на [GitHub](https://github.com/devSchacht), общайтесь в [группе Telegram](https://t.me/devSchacht), следите в [Twitter](https://twitter.com/DevSchacht) и [канале Telegram](https://t.me/devSchachtChannel), рекомендуйте в [VK](https://vk.com/devschacht) и [Facebook](https://www.facebook.com/devSchacht).*
-
-[Глава на Medium](https://medium.com/devschacht/node-hero-chapter-2-f04fec8182f0)
