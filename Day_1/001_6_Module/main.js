@@ -1,4 +1,3 @@
-var mod = require('./mod.js');
 // Объект module хранит информацию о текущем модуле
 console.log(module);
 
