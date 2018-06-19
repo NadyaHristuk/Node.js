@@ -9,11 +9,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 var artists = [
   {
     id: 1,
-    name: 'Metallica'
+    name: 'Metallica',
   },
   {
     id: 2,
-    name: 'Iron Maiden'
+    name: 'Iron Maiden',
+    age: 33,
+    style: "Metal"
   },
   {
     id: 3,
@@ -29,6 +31,14 @@ app.get('/artists', function (req, res) {
   res.send(artists);
 })
 
+app.get('/artists/name/:name', function (req, res) {
+  console.log(req.params);
+  var artist = artists.find(function (artist) {
+    return artist.name === req.params.name
+  });
+  res.send(artist);
+})
+
 app.get('/artists/:id', function (req, res) {
   console.log(req.params);
   var artist = artists.find(function (artist) {
@@ -37,13 +47,17 @@ app.get('/artists/:id', function (req, res) {
   res.send(artist);
 })
 
+
 app.post('/artists', function (req, res) {
   var artist = {
     id: Date.now(),
     name: req.body.name
   };
   artists.push(artist);
-  res.send(artist);
+  res.send({
+    message: "Artist created.",
+    createdArtist: artist
+  });
 })
 
 app.put('/artists/:id', function (req, res) {
@@ -61,6 +75,6 @@ app.delete('/artists/:id', function (req, res) {
   res.sendStatus(200);
 })
 
-app.listen(3012, function () {
+app.listen(3000, function () {
   console.log('API app started');
 })

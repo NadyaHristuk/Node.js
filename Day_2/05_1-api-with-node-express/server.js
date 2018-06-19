@@ -5,7 +5,7 @@ var app = express();
 var artists = [
   {
     id: 1,
-    name: 'Metallica'
+    name: 'Metallica',
   },
   {
     id: 2,
@@ -24,7 +24,6 @@ app.get('/', function (req, res) {
 app.get('/artists', function (req, res) {
   res.send(artists);
 })
-
 app.get('/artists/:id', function (req, res) {
   console.log(req.params);
   var artist = artists.find(function (artist) {
@@ -32,7 +31,14 @@ app.get('/artists/:id', function (req, res) {
   });
   res.send(artist);
 })
-
+app.get('/artists/name/:name', function (req, res) {
+  console.log(req.params);
+  var artist = artists.find(function (artist) {
+    return artist.name === req.params.name
+  });
+  res.send(artist);
+})
 app.listen(3012, function () {
   console.log('API app started');
 })
+//http://localhost:3012/artists/name/Metallica
