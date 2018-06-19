@@ -266,8 +266,10 @@ CRUD is an acronym for Create, Read, Update and Delete. It is a set of operation
 ###### Read (GET)_- Get something
 ###### Update (PUT) - Change something
 ###### Delete (DELETE)- Remove something
+
+ [![crud-express-mongo](crud-express-mongo "crud-express-mongo")](https://github.com/NadyaHristuk/Node.js/blob/master/Day_2/crud-express-mongo.png?raw=true "crud-express-mongo")
+ 
 If we put CRUD, Express and MongoDB together into a single diagram, this is what it would look like:
- [![crud-express-mongo](crud-express-mongo "crud-express-mongo")](https://raw.githubusercontent.com/NadyaHristuk/Node.js/master/Day_2/crud-express-mongo.png "1")
 https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
 
 ### HTTP-метод имеет значение
