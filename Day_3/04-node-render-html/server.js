@@ -7,7 +7,7 @@ var app = express();
 app.use(bodyParser.json());
 
 // create application/x-www-form-urlencoded parser
-var urlencodedParser = bodyParser.urlencoded({ extended: false })
+app.use(bodyParser.urlencoded({ extended: true }));
 
 //тут читаем описание метода urlencoded
 //https://www.npmjs.com/package/body-parser#express-route-specific
@@ -21,7 +21,7 @@ app.get('/', function (req, res) {
   })
   
  // POST /login gets urlencoded bodies
-app.post('/login', urlencodedParser, function (req, res) {
+app.post('/login', (req, res) =>{
     if (!req.body) return res.sendStatus(400)
     res.send('welcome, ' + req.body)
     console.log(req.body);
