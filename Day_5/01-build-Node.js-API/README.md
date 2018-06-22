@@ -179,7 +179,7 @@ module.exports = function(app, db) {
 Когда приложение получает POST-запрос по пути ‘/notes’, оно исполнит код внутри функции обратного вызова, передав ей объект запроса (который содержит параметры запроса или JSON-данные) и объект ответа (который, понятно, используется для ответа).
 
 То, что у нас получилось, уже можно протестировать. Отправим, с помощью Postman, POST-запрос по адресу localhost:8000/notes.
-![Иллюстрация к проекту](https://github.com/NadyaHristuk/Node.js/raw/master/01-build-Node.js-API/6d8c113b7d06bfbc24bc41fc3172a7d8.png)
+![Иллюстрация к проекту](https://raw.githubusercontent.com/NadyaHristuk/Node.js/master/Day_5/01-build-Node.js-API/6d8c113b7d06bfbc24bc41fc3172a7d8.png)
 
 #### В ответ на запрос должно прийти «Hello»
 
@@ -196,14 +196,15 @@ module.exports = function(app, db) {
 
 В файле note_route.js, просто выведем тело заметки в консоль.
 
-`// note_routes.js
+```javascript
+// note_routes.js
 module.exports = function(app, db) {
   app.post('/notes', (req, res) => {
     console.log(req.body)
     res.send('Hello')
   });
 };`
-
+```
 Попробуйте отправить запрос с помощью Postman, и вы увидите… undefined.
 
 К сожалению, Express не может самостоятельно обрабатывать формы в URL-кодировке. Тут нам на помощь придёт ранее установленный пакет body-parser.
@@ -417,7 +418,7 @@ app.post('/notes', (req, res) => {
 ```
 
 Испытайте это с одним из идентификаторов заметок, имеющихся в базе данных. Ответ в Postman должен выглядеть так:
-![Иллюстрация к проекту](https://github.com/NadyaHristuk/Node.js/raw/master/Day_5/01-build-Node.js-API/8a499b47610f1fa969512bb4c1a7a7c3.png)
+![Иллюстрация к проекту](https://raw.githubusercontent.com/NadyaHristuk/Node.js/master/Day_5/01-build-Node.js-API/e0b0d854f7caca35f0a1937c4f200bd0.png)
 
 
 ### Успешный запрос заметки из базы
