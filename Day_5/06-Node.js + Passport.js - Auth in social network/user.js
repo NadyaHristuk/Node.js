@@ -3,7 +3,7 @@
     поиска. В реальности необходим свой собственный идентификатор.
 
     Поля provider и id — свойства структуры профиля, которую возвращает
-    PasssportJS — http://passportjs.org/guide/profile/
+    PasssportJS — http://www.passportjs.org/docs/profile/
  */
 function prepareId(profile) {
     return [profile.provider, profile.id].join(':');
