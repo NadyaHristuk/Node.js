@@ -237,6 +237,7 @@ app.listen(port, () => {
 
 Скопируйте с той же страницы второй URL – строку подключения к базе данных.
 
+![Иллюстрация к проекту](https://raw.githubusercontent.com/NadyaHristuk/Node.js/Day_5/01-build-Node.js-API/1413362b5286919cfeb0448e98b5432c.png)
 
 #### URL для подключения к базе данных
 
