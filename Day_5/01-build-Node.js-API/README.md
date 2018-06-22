@@ -190,7 +190,7 @@ module.exports = function(app, db) {
 В Postman перейдите на вкладку Body и добавьте несколько пар ключ-значение, выбрав радиокнопку x-www-form-urlencoded. А именно, первым ключом будет title, его значение – My Note Title. Второй ключ – body, его значение – What a great note.
 
 Это добавит к запросу закодированные данные, которые можно будет обработать в API.
-![Иллюстрация к проекту](https://github.com/NadyaHristuk/Node.js/raw/master/01-build-Node.js-API/16862ff0156da71a2e4cf34ac7e2290c.png)
+![Иллюстрация к проекту](https://github.com/NadyaHristuk/Node.js/raw/master/Day_5/01-build-Node.js-API/16862ff0156da71a2e4cf34ac7e2290c.png)
 
 Заголовок моей заметки, да и она сама – очень просты, а вы тут можете проявить фантазию
 
@@ -469,7 +469,7 @@ app.post('/notes', (req, res) => {
 ```
 
 Теперь любую заметку можно редактировать. Вот, как это выглядит:
-![Иллюстрация к проекту](https://github.com/NadyaHristuk/Node.js/raw/master/Day_5/01-build-Node.js-API/01-build-Node.js-API/e0b0d854f7caca35f0a1937c4f200bd0.png)
+![Иллюстрация к проекту](https://github.com/NadyaHristuk/Node.js/raw/master/Day_5/01-build-Node.js-API/e0b0d854f7caca35f0a1937c4f200bd0.png)
 
 
 Успешное обновление заметки
