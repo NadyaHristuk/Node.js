@@ -179,7 +179,7 @@ module.exports = function(app, db) {
 Когда приложение получает POST-запрос по пути ‘/notes’, оно исполнит код внутри функции обратного вызова, передав ей объект запроса (который содержит параметры запроса или JSON-данные) и объект ответа (который, понятно, используется для ответа).
 
 То, что у нас получилось, уже можно протестировать. Отправим, с помощью Postman, POST-запрос по адресу localhost:8000/notes.
-
+![Иллюстрация к проекту](https://github.com/NadyaHristuk/Node.js/raw/master/01-build-Node.js-API/6d8c113b7d06bfbc24bc41fc3172a7d8.png)
 
 #### В ответ на запрос должно прийти «Hello»
 
@@ -190,7 +190,7 @@ module.exports = function(app, db) {
 В Postman перейдите на вкладку Body и добавьте несколько пар ключ-значение, выбрав радиокнопку x-www-form-urlencoded. А именно, первым ключом будет title, его значение – My Note Title. Второй ключ – body, его значение – What a great note.
 
 Это добавит к запросу закодированные данные, которые можно будет обработать в API.
-
+![Иллюстрация к проекту](https://github.com/NadyaHristuk/Node.js/raw/master/01-build-Node.js-API/16862ff0156da71a2e4cf34ac7e2290c.png)
 
 Заголовок моей заметки, да и она сама – очень просты, а вы тут можете проявить фантазию
 
@@ -232,6 +232,7 @@ app.listen(port, () => {
 
 Создайте учётную запись на сайте mLab и разверните новую базу данных MongoDB. Для этого нажмите на кнопку Create New в разделе MongoDB Deployments, в появившемся окне, в разделе Plan, выберите Single-node. В списке Standard Line, выберите Sandbox и дайте базе данных имя. Далее, в окне управления базой, перейдите на вкладку Users и добавьте пользователя базы данных, задав имя и пароль.
 
+![Иллюстрация к проекту](https://github.com/NadyaHristuk/Node.js/raw/master/Day_5/01-build-Node.js-API/6caa007de80aec2f63231427ff05d56b.png)
 
 #### Новый пользователь базы данных
 
@@ -318,7 +319,7 @@ module.exports = function(app, db) {
 Испытайте то, что получилось. Отправьте из Postman POST-запрос (с флагом x-www-form-urlencoded ), задав на вкладке Body значения полей title и body.
 
 #### Ответ должен выглядеть примерно так:
-
+![Иллюстрация к проекту](https://github.com/NadyaHristuk/Node.js/raw/master/Day_5/01-build-Node.js-API/2f6d3de0489d855a2448345e5b6ba9a0.png)
 
 ##### Успешное добавление записи в базу
 
@@ -416,6 +417,7 @@ app.post('/notes', (req, res) => {
 ```
 
 Испытайте это с одним из идентификаторов заметок, имеющихся в базе данных. Ответ в Postman должен выглядеть так:
+![Иллюстрация к проекту](https://github.com/NadyaHristuk/Node.js/raw/master/Day_5/01-build-Node.js-API/8a499b47610f1fa969512bb4c1a7a7c3.png)
 
 
 ### Успешный запрос заметки из базы
@@ -466,6 +468,7 @@ app.post('/notes', (req, res) => {
 ```
 
 Теперь любую заметку можно редактировать. Вот, как это выглядит:
+![Иллюстрация к проекту](https://github.com/NadyaHristuk/Node.js/raw/master/Day_5/01-build-Node.js-API/01-build-Node.js-API/e0b0d854f7caca35f0a1937c4f200bd0.png)
 
 
 Успешное обновление заметки
