@@ -13,28 +13,40 @@
 ##### День 2
 1. Работа с Express
 2. Routing
-1. MVC рассказать.
-3. Работа с базами данных Mongo (Mongoose)(chapter5)
-4. Модуль Request(chapter6)
-5. Файловая структура проекта(chapter7)
-6. Аутентификация в Node.js с использованием Passport.js(chapter8)
 - [Ссылка на теорию - день 2](https://github.com/NadyaHristuk/Node.js/blob/master/Day_2/README.md "Ссылка на теорию - день 1")
-- [Ссылка на код - день 2](https://github.com/NadyaHristuk/Node.js/tree/master/Day_2 "Ссылка на код - день 1")
+- [Ссылка на код - день 2](https://github.com/NadyaHristuk/Node.js/tree/master/Day_2 "Ссылка на код - день 3")
 
-##### День 3-10
-1. Проект "Node.js, Express и MongoDB: от разработки до развертывания"
-- [Ссылка на теорию - день 3-10](https://github.com/NadyaHristuk/Node.js/blob/master/Day_3-10/README.md "Ссылка на теорию - день 1")
-- [Ссылка на код - день 3-10](https://github.com/NadyaHristuk/Node.js/tree/master/Day_3-10 "Ссылка на код - день 3-6")
+##### День 3-4
+1. Работа с базами данных Mongo (Mongoose)(chapter5)
+2. Модуль Request(chapter6)
+3. Файловая структура проекта(chapter7)
+4. Создание API и авторизация пользователя.Токены.
+- [Ссылка на теорию - день 3-4](https://github.com/NadyaHristuk/Node.js/blob/master/Day_2/README.md "Ссылка на теорию - день 1")
+- [Ссылка на код - день 3-4](https://github.com/NadyaHristuk/Node.js/tree/master/Day_2 "Ссылка на код - день 3")
 
-##### День 11
+##### День 5
+1. Сессии в Node.js
+2. Аутентификация в Node.js с использованием Passport.js(chapter8)
+- [Ссылка на теорию - день 5](https://github.com/NadyaHristuk/Node.js/blob/master/Day_2/README.md "Ссылка на теорию - день 1")
+- [Ссылка на код - день 5](https://github.com/NadyaHristuk/Node.js/tree/master/Day_2 "Ссылка на код - день 3")
+
+##### День 6
+1. MVC рассказать
 1. API
 9. Модульное тестирование(chapter9)
 10. Отладка(chapter10)
 11. Безопасность(chapter11)
 12. Деплой вашего приложения(chapter12)
 13. Мониторинг Node.js-приложений(chapter13)
-- [Ссылка на теорию - день 11](https://github.com/NadyaHristuk/Node.js/blob/master/Day_11/README.md "Ссылка на теорию - день 1")
-- [Ссылка на код - день 11](https://github.com/NadyaHristuk/Node.js/tree/master/Day_11 "Ссылка на код - день 1")
+- [Ссылка на теорию - день 6](https://github.com/NadyaHristuk/Node.js/blob/master/Day_11/README.md "Ссылка на теорию - день 1")
+- [Ссылка на код - день 6](https://github.com/NadyaHristuk/Node.js/tree/master/Day_11 "Ссылка на код - день 1")
+
+
+##### День 7-10
+1. Проект "Node.js, Express и MongoDB: от разработки до развертывания"
+- [Ссылка на теорию - день 7-10](https://github.com/NadyaHristuk/Node.js/blob/master/Day_3-10/README.md "Ссылка на теорию - день 1")
+- [Ссылка на код - день 7-10](https://github.com/NadyaHristuk/Node.js/tree/master/Day_3-10 "Ссылка на код - день 3-6")
+
 
 ##### День 12-15
 1. Разработка финального приложения
