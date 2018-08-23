@@ -8,3 +8,6 @@ module.exports = {
     variable : number,
     sayHello : hello
 };
+
+
+module.exports = exports = this.exports

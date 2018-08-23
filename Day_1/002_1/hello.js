@@ -1,4 +1,11 @@
 const fs = require('fs')
+// let y= fs.readFileSync('hello.txt');
+// console.log(y)
+
+let txt = fs.readFileSync('hello.txt', 'utf-8');
+ console.log(txt);
+
+
 
 // fs.readFile('hello.txt', 'utf8', (error, content) =>
 //   content
@@ -7,13 +14,15 @@ const fs = require('fs')
 //     .forEach(line => console.log(line))
 // )
 
-// let txt = fs.readFileSync('hello.txt', 'utf-8'){
-//     console.log('file is reading')
-// }
-// console.log(content)
+const fs = require('fs')
+fs.readFile('hello.txt', 'utf-8', function (err, content) {
+    if (err) {
+        return console.log(err)
+    }
 
-let txt = fs.readFileSync('hello.txt', 'utf-8');
-// console.log(txt);
+    console.log(content)
+})
 
-let txt_write = 'Hello world!!'+'\n' + txt;
-fs.writeFile('some_new_file.txt', txt_write);
+
+// let txt_write = 'Hello world!!'+'\n' + txt;
+// fs.writeFile('some_new_file.txt', txt_write);

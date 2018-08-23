@@ -1,3 +1,3 @@
 var obj = require('./mod');
 
-console.log(obj);
+console.log(obj.func());

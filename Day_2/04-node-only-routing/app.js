@@ -1,4 +1,4 @@
-var url = require('url');
+var url_mod = require('url');
 var fs = require('fs');
 
 function renderHTML(path, response) {
@@ -13,11 +13,14 @@ function renderHTML(path, response) {
     });
 }
 
+
+
+
 module.exports = {
   handleRequest: function(request, response) {
       response.writeHead(200, {'Content-Type': 'text/html'});
 
-      var path = url.parse(request.url).pathname;
+      let path = url_mod.parse(request.url).pathname;
       switch (path) {
           case '/':
               renderHTML('./index.html', response);
@@ -27,9 +30,10 @@ module.exports = {
               break;
           default:
               response.writeHead(404);
-              response.write('Route not defined');
-              response.end();
+            //   response.write();
+              response.end('Route not defined');
       }
 
   }
 };
+

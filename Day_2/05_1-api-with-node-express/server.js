@@ -1,8 +1,8 @@
-var express = require('express');
+let express = require('express');
 
-var app = express();
+let app = express();
 
-var artists = [
+let artists = [
   {
     id: 1,
     name: 'Metallica',
@@ -26,7 +26,7 @@ app.get('/artists', function (req, res) {
 })
 app.get('/artists/:id', function (req, res) {
   console.log(req.params);
-  var artist = artists.find(function (artist) {
+  let artist = artists.find(function (artist) {
     return artist.id === Number(req.params.id)
   });
   res.send(artist);

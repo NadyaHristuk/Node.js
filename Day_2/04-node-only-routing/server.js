@@ -1,4 +1,4 @@
-var http = require('http');
-var app = require('./app');
+const http = require('http');
+const app = require('./app');
 
 http.createServer(app.handleRequest).listen(8000);
