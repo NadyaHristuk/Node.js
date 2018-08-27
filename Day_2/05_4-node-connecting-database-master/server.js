@@ -1,10 +1,11 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var MongoClient = require('mongodb').MongoClient;
-var ObjectID = require('mongodb').ObjectID
+var ObjectID = require('mongodb').ObjectID;
+const db = require('./config/db');
 
 var app = express();
-var db;
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -29,7 +30,7 @@ app.get('/', function (req, res) {
 })
 
 app.get('/artists', function (req, res) {
-  db.collection('artists').find().toArray(function (err, docs) {
+  db.collection('sportsmens').find().toArray(function (err, docs) {
     if (err) {
       console.log(err);
       return res.sendStatus(500);
@@ -77,11 +78,11 @@ app.delete('/artists/:id', function (req, res) {
   res.sendStatus(200);
 })
 
-MongoClient.connect('mongodb://localhost:27017/api', function (err, database) {
+
+MongoClient.connect(db.url, function (err) {
   if (err) {
     return console.log(err);
   }
-  db = database;
   app.listen(3012, function () {
     console.log('API app started');
   })

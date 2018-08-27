@@ -49,15 +49,17 @@ app.get('/artists/:id', function (req, res) {
 
 
 app.post('/artists', function (req, res) {
-  var artist = {
+  let artist = {
     id: Date.now(),
     name: req.body.name
   };
+  console.log(req.body);
   artists.push(artist);
-  res.send({
-    message: "Artist created.",
-    createdArtist: artist
-  });
+  res.send(artist);
+  // res.send({
+  //   message: "Artist created.",
+  //   createdArtist: artist
+  // });
 })
 
 app.put('/artists/:id', function (req, res) {
@@ -65,7 +67,8 @@ app.put('/artists/:id', function (req, res) {
     return artist.id === Number(req.params.id)
   });
   artist.name = req.body.name;
-  res.sendStatus(200);
+  res.send(artist);
+  // res.sendStatus(200);
 })
 
 app.delete('/artists/:id', function (req, res) {

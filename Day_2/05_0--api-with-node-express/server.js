@@ -10,8 +10,8 @@ app.get('/login', function (req, res) {
   res.send('This is login');
 })
 
-app.get('/login/:id', function (req, res) {
-  res.send('ID - is' + req.params.id);
+app.get('/:login/:id', function (req, res) {
+  res.send('ID - is' + req.params.id +req.params.login);
 })
 
 
