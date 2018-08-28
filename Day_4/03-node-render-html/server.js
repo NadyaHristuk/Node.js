@@ -24,8 +24,7 @@ app.get('/', function (req, res) {
 app.post('/login', (req, res) =>{
     if (!req.body) return res.sendStatus(400)
     res.send('welcome, ' + req.body.name)
-    console.log(req.body);
-    ///login/some?filter=id&sity=kiev
+    console.log(req.body);    
     console.log(req.query);
   })
 

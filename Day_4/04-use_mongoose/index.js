@@ -3,5 +3,5 @@ mongoose.Promise=global.Promise;
 mongoose.connect("mongo....", {
     useMongoClient: true
 })
-. then(()=> (console.log('MongoDB has started')))
+.then(()=> (console.log('MongoDB has started')))
 .catch(e=> (console.log(e)))
