@@ -87,3 +87,14 @@ MongoClient.connect(db.url, function (err) {
     console.log('API app started');
   })
 })
+
+// The legacy operation
+// MongoClient.connect('mongodb://localhost:27017/test', (err, db) => {
+//    // Database returned
+// });
+
+// is replaced with
+// MongoClient.connect('mongodb://localhost:27017/test', (err, client) => {
+//    // Client returned
+//    var db = client.db('test');
+// });
