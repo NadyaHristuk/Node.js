@@ -4,7 +4,7 @@ const routerCats = require('./routes/cats');
 const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://root:567234@ds121965.mlab.com:21965/it651', {useMongoClient: true});
+mongoose.connect('mongodb://root:567234@ds121965.mlab.com:21965/it651');
 
 const app = express();
 

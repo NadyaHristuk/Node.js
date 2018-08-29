@@ -42,7 +42,8 @@ module.exports.update = function (data, paramsId) {
     "_id": paramsId
   }, {
     $set: updateCat
-  }, {new: true})
+  }, {new: true}) 
+  // new: bool - true to return the modified document rather than the original. defaults to false
 };
 
 module.exports.delete = function (paramsId) {
