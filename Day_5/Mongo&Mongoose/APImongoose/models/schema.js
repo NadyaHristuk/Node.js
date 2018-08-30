@@ -11,7 +11,8 @@ let catSchema = new Schema({
   },
   age: {
     type: Number
-  }
+  },
+  date: Date.now()
 });
 
 const Cat = mongoose.model('cat', catSchema);
