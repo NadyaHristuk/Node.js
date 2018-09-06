@@ -1,14 +1,14 @@
 const express = require('express');
 const session = require('express-session');
 const FileStore = require('session-file-store')(session);
-const bodyParser = require('body-parser');
+//const bodyParser = require('body-parser');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 
 const app = express();
 
-app.use(bodyParser.urlencoded({extended: false}));
-app.use(bodyParser.json());
+app.use(express.json()); 
+app.use(express.urlencoded());
 app.use(session({store: new FileStore(), secret: 'secret of loftschool', resave: false, saveUninitialized: true}));
 
 // хранилище пользователей, в примере он один и хранится в объекте

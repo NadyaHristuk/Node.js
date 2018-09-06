@@ -11,7 +11,7 @@ const  UserSchema = new Schema({
   });
 
   UserSchema.methods.setPassword = function (password) {
-    this.hash = bCrypt.hashSync(password, bCrypt.genSaltSync(10), null);
+    this.hash = bCrypt.hashSync(password, bCrypt.genSaltSync(10));
   };
   
   UserSchema.methods.validPassword = function (password) {
