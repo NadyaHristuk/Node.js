@@ -1,11 +1,10 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const expressjwt = require("express-jwt");
 
 const app = express();
-const PORT = process.env.API_PORT || 8888;
+const PORT = process.env.API_PORT || 8884;
 
-app.use(bodyParser.json());
+app.use(express.json());
 
 const jwtCheck = expressjwt({
     secret: "mysupersecretkey"

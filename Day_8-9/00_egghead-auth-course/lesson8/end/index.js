@@ -1,11 +1,11 @@
 const API_URL = "http://localhost:8888";
 
+
 let ACCESS_TOKEN = undefined;
 let webAuth = new auth0.WebAuth({
-  domain: 'joel-1.auth0.com',
-  clientID: '8vXPduLlATyDg69DF13J7JY4xN2vveOG',
-  responseType: 'token',
-  audience: 'secure-spa-auth0',
+  domain: 'apipass.auth0.com',
+  clientID: 'mBSrHioSsN2Xv7SMGlhe5ayvYb71AtyJ',
+  responseType: 'token',  
   scope: '',
   redirectUri: window.location.href
 });

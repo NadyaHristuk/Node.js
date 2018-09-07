@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 const cors = require("cors");
 
 const app = express();
-const PORT = process.env.PORT || 8888;
+const PORT = process.env.PORT || 8878;
 const users = [
     {id: 1, username: "admin", password: "admin"},
     {id: 2, username: "guest", password: "guest"}

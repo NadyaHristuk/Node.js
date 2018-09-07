@@ -1,5 +1,5 @@
 const API_URL = "http://localhost:8888";
-const AUTH_URL = "http://localhost:3000";
+const AUTH_URL = "http://localhost:8878";
 
 let ACCESS_TOKEN = undefined;
 

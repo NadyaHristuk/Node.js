@@ -2,17 +2,23 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const expressjwt = require("express-jwt");
 const cors = require("cors");
+const path = require("path");
 
 const app = express();
-const PORT = process.env.API_PORT || 8888;
+const PORT = process.env.PORT || 8887;
 
 app.use(bodyParser.json());
 app.use(cors());
 
 const jwtCheck = expressjwt({
-  secret: 't2ABNgm7aB8YrMrnsutSB0bPNtLZbC7P',
-  audience: 'secure-spa-auth0',
-  issuer: "https://joel-1.auth0.com/"
+  secret: 'mBSrHioSsN2Xv7SMGlhe5ayvYb71AtyJ',
+   issuer: "https://apipass.auth0.com/"
+});
+
+app.get("/", (req, res) => {
+    res
+    .status(200)
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.get("/resource", (req, res) => {

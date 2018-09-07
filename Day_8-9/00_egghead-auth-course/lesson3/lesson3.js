@@ -1,10 +1,9 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 
 const app = express();
 const PORT = process.env.PORT || 8888;
 
-app.use(bodyParser.json());
+app.use(express.json());
 
 app.post("/login", (req, res) => {
     const user = req.body.username;
@@ -15,7 +14,8 @@ app.post("/login", (req, res) => {
 })
 
 app.get("*", (req, res) => {
-    res.sendStatus(404);
+    res
+    .sendStatus(404)    
 });
 
 app.listen(PORT, () => {
