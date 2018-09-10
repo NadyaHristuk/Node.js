@@ -1,3 +1,3 @@
 module.exports = {
-    DB: 'mongodb://localhost:27017/auth'
+    DB: 'mongodb://test:qwe123@ds133632.mlab.com:33632/sandbox'
 }

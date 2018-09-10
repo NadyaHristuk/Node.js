@@ -14,11 +14,12 @@ const userGoogle = () => {
           clientSecret: '2qSI3qNebIGxGtK0XUeYbA5l',
           callbackURL: `http://infinite-ridge-68592.herokuapp.com/users/login/google/callback`
      }, (req, accessToken, refreshToken, profile, done) => {
-          console.log('qwe', profile);
+        console.log('hi!');  
+        console.log('qwe', profile);
           let data = profile._json;
 
           Social.findOne({id: data.id})
-          .exec()
+         // .exec()
           .then(user => {
               if (!user) {
                   const newUser = new Social({

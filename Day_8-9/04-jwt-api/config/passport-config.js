@@ -41,15 +41,13 @@ passport.use(
 );
 
 var strategy = new Strategy(params, function(payload, done) {
-  const User = mongoose.model('login');
+  //const User = mongoose.model('login');
   User.find({ id: payload.id })
     .then(user => {
       if (user) {
-        return done(null, {
-          id: user.id
-        });
+        return done(null, {id: user.id});
       } else {
-        return done(new Error('User not found'), null);
+        return done(null, new Error('User not found'));
       }
     })
     .catch(err => {

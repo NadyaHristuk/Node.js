@@ -1,7 +1,5 @@
 const express = require('express'); // получаем модуль Express
 const app = express(); // создаем приложение, создает объект приложения.
-const productRouter = require('./api/routes/products');
-const orderRouter = require('./api/routes/orders');
 const userRouter = require('./api/routes/users');
 const checkAuth = require('./api/middleWares/middleWares')
 app.use(express.json()); //мидлвеэре. смотрит и вызывает
@@ -12,8 +10,7 @@ app.get('/', function (req, res, next) {
     res.sendFile(__dirname + '/static/index.html')
 
 })
-app.use('/orders', orderRouter);
-app.use('/products', productRouter); // обрабатываем и отдаем ответ и поэтому метод некст не вызывамем// устанавливаем обработчик для маршрута "/"
+
 app.use('/users', userRouter);
 module.exports = app; //Чтобы какие переменные или функции модуля были доступны, необходимо определить их в объекте module.exports. Объект module.exports - это то, что возвращает функция require() при получении модуля.
 

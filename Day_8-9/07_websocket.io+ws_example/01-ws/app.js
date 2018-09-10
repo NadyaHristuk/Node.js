@@ -4,6 +4,7 @@ const webSocketServer = new WebSocket.Server({port: 8080});
 
 const clients = [];
 
+
 webSocketServer.on('connection', ws => {
   const id = clients.length;
   clients[id] = ws;

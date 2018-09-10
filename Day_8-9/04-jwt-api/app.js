@@ -9,7 +9,7 @@ const config = require('./config/config');
 const routerCats = require('./routes/cats');
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://root:567234@ds121965.mlab.com:21965/it651', {useMongoClient: true});
+mongoose.connect('mongodb://admin:567234a@ds135537.mlab.com:35537/passport', {useMongoClient: true});
 
 require('./models/user');
 
@@ -36,26 +36,57 @@ require('./config/passport-config');
 app.use(passport.initialize({userProperty: 'payload'}));
 app.use(passport.session());
 
-app.post('/token', function (req, res, next) {
-  passport.authenticate('loginUsers', (err, user) => {
-    if (err) {
-      return next(err);
-    }
-    if (!user) {
-      return res.json({status: 'Укажите правильный логин и пароль!'});
-    }
-    req
-      .logIn(user, function (err) {
-        if (err) {
-          return next(err);
-        }
-        var payload = {
-          id: user.id
-        };
-        var token = jwt.encode(payload, config.secret); // line 10 passport-config
-        res.json({token: token});
-      });
-  })(req, res, next);
+// app.post('/token', function (req, res, next) {
+//   passport.authenticate('loginUsers', (err, user) => {
+//     if (err) {
+//       return next(err);
+//     }
+//     if (!user) {
+//       return res.json({status: 'Укажите правильный логин и пароль!'});
+//     }
+//     req
+//       .logIn(user, function (err) {
+//         if (err) {
+//           return next(err);
+//         }
+//         var payload = {
+//           id: user.id
+//         };
+//         var token = jwt.encode(payload, config.secret); // line 10 passport-config
+//         res.json({token: token});
+//       });
+//   })(req, res, next);
+// });
+
+
+
+app.post('/token', (req, res) => {
+  if (!req.body.username || !req.body.password) {
+      res
+      .status(400)
+      .send("You need a username and password");
+      return;
+  }
+
+  const user = users.find((u) => {
+      return u.login === req.body.username && u.password === req.body.password;
+  });
+
+  if (!user) {
+      res
+      .status(401)
+      .send("User not found");
+      return;
+  }
+
+  const token = jwt.sign({
+      sub: user.id,
+      username: user.username
+  }, "mysupersecretkey", {expiresIn: "3 hours"});
+
+  res
+  .status(200)
+  .send({access_token: token});
 });
 
 app.use('/api/cats', routerCats);

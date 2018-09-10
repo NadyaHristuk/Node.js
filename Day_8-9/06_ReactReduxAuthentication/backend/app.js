@@ -20,10 +20,24 @@ app.use(bodyParser.json());
 
 app.use('/api/users', users);
 
+
 app.get('/', function(req, res) {
     res.send('hello');
 });
 
+app.use((req, res, next) => {
+    res
+      .status(404)
+      .json({err: '404'});
+  });
+  
+  app.use((err, req, res, next) => {
+    console.log(err.stack);
+    res
+      .status(500)
+      .json({err: '500'});
+  })
+  
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
