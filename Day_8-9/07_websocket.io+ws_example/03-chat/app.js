@@ -8,7 +8,7 @@ const path = require('path');
 //статические ресурсы
 app.use(express.static(path.join(__dirname, 'public')));
 
-server.listen(3000, function () {
+server.listen(3001, function () {
   console.log('Server running in port 3000');
 });
 

@@ -3,7 +3,7 @@ const express = require('express');
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy; //не правильный рекваер,правильный инсталл авторизации, 2е не подключен класс
 //3е 
-// const User = require('../models/users');
+ const User = require('../models/users');
 const Social = require('../models/socilalUsers');
 const PORT = require('../../config/port');
 const localHost = require('../../config/localHost');

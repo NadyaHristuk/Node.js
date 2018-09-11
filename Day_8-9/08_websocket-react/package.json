@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "ajv": "^6.5.3",
     "cors": "^2.8.4",
     "express": "^4.16.3",
     "prop-types": "^15.6.1",
@@ -16,11 +17,11 @@
     "styled-components": "^3.2.5"
   },
   "scripts": {
-    "start": "react-scripts build && node ./server/app.js",
+    "start": "cd server && node app.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run start && npm install && npm run build"
+    "heroku-postbuild": "npm install && npm run build"
   },
   "proxy": "http://localhost:9988"
 }

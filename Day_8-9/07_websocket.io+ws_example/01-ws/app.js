@@ -12,6 +12,7 @@ webSocketServer.on('connection', ws => {
   clients[id].send(JSON.stringify({type: 'hello', message: `Приветствуем! ваш идентификатор  ${id}`, data: id}));
   clients.forEach((elem) => {
     elem.send(JSON.stringify({type: 'info', message: `K нам присоединился #${id}`}));
+    console.log(clients);
   });
   ws.on('message', message => {
     console.log(`Пoлyчeнo сообщение: ${message}`);

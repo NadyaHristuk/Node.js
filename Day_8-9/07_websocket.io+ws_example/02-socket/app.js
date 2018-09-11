@@ -19,11 +19,11 @@ let count = 0;
 io
   .sockets
   .on('connection', function (socket) {
-    let id = count++;
+    let id = count+=1;
     clients[id] = socket.id;
     console.log(clients);
     socket.send({type: 'hello', message: `Приветствуем! ваш идентификатор  ${id}`, data: id});
-    socket.send({type: 'info', message: `K нам присоединился #${id}`});
+    //socket.send({type: 'info', message: `K нам присоединился #${id}`});
     socket
       .broadcast
       .send({type: 'info', message: `K нам присоединился #${id}`});
