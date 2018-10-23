@@ -32,12 +32,13 @@
 
 ![Иллюстрация к проекту](https://raw.githubusercontent.com/NadyaHristuk/Node.js/master/nodehero.jpg)
 
+---
 # Node.js
-## Перечень тем на курсе:Перечень тем на курсе:
+## Перечень тем на курсе:
 ##### День 1
-1. Introduce to NodeJS
-2. Npm
-3. Async code
+1. Introduce to NodeJS. 
+2. Npm. Core Library. Require.
+3. Async code. FileSystem with NodeJS. Logging.
 4. Simple HTTP server. Static Rendering.
 - [Ссылка на теорию - день 1](https://github.com/NadyaHristuk/Node.js/blob/master/Day_1/README.md "Ссылка на теорию - день 1")
 - [Ссылка на код - день 1](https://github.com/NadyaHristuk/Node.js/tree/master/Day_1 "Ссылка на код - день 1")
