@@ -1,36 +1,36 @@
-####Programm NodeJS:
+#### Programm NodeJS:
 
-#####Day 1: 
+##### Day 1: 
 - Introduce to NodeJS. Npm. Core Library. Require.
 - Async code. FileSystem with NodeJS. Logging.
 - Simple HTTP server. Static Rendering.
-#####Day 2: 
+##### Day 2: 
 - MongoDB. Mongoose. 
 - Express. 
 - MVC patter. 
 - Middlewares. 
 - REST/RESTful API
-#####Day 3: 
+##### Day 3: 
 - Koa.
-#####Day 4: 
+##### Day 4: 
 - JWT. Authentification.
-#####Day 5: 
+##### Day 5: 
 - Testing NodeJS app. Mocha/Chai.
-#####Day 6: 
+##### Day 6: 
 -Websockets.
-#####Day 7: 
+##### Day 7: 
 - Practice: Make chat application.
-#####Day 8: 
+##### Day 8: 
 - Deployment Heroku.
-#####Day 9: 
+##### Day 9: 
 - Practice. Questions.
-#####Day 10: 
+##### Day 10: 
 - Practice. Questions.
-#####Day 15: 
+##### Day 15: 
 - Practice. Questions.
 
 
-![Иллюстрация к проекту](https://raw.githubusercontent.com/NadyaHristuk/Node.js/master/Day_1/nodehero.jpg)
+![Иллюстрация к проекту](https://raw.githubusercontent.com/NadyaHristuk/Node.js/master/nodehero.jpg)
 
 # Node.js
 ## Перечень тем на курсе:Перечень тем на курсе:
