@@ -1,44 +1,47 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/test', { useNewUrlParser: true });
 
-const app = express();
 
-let artists = [
-  {
-    id: 1,
-    name: 'Mocart'
-  },
-  {
-    id: 2,
-    name: 'Bethoven'
-  },
-  {
-    id: 3,
-    name: 'Shopen'
-  }
-];
+let app = express();
+let db;
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+
+const schema = new Schema({
+  name: String
+});
+
 
 app.get('/', function (req, res) {
   res.send('Hello API');
 })
 
-app.get('/artists', function (req, res) {
-  res.send(artists);
+app.post('/artist', function (req, res) {
+  let artist = {
+    name: req.body.name
+  };
+  db.collection('artists').insert(artist, function (err, result) {
+    if (err) {
+      console.log(err);
+      return res.sendStatus(500);
+    }
+    res.send(result);  })  
 })
-app.get('/artists/:id', function (req, res) {
-  console.log(req.params);
-  let artist = artists.find(function (artist) {
-    return artist.id === Number(req.params.id)
-  });
-  res.send(artist);
+
+MongoClient.connect('mongodb://bc7:123qwe@ds241489.mlab.com:41489/test_base', function (err, database) {
+  if (err) {
+    return console.log(err);
+  }
+  db = database;
+  app.listen(3020, function () {
+    console.log('API app started');
+  })
+
 })
-app.get('/artists/name/:name', function (req, res) {
-  console.log(req.params);
-  let artist = artists.find(function (artist) {
-    return artist.name === req.params.name
-  });
-  res.send(artist);
-})
-app.listen(3012, function () {
-  console.log('API app started');
-})
-//http://localhost:3012/artists/name/Metallica
+  
+
+
