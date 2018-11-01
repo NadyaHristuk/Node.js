@@ -24,7 +24,8 @@ module.exports.addUser = function (req, res) {
     .add(req.body)
     .then((results) => {
       res
-        .status(201)        
+        .status(201)
+        .json(results);        
     })
     .catch((err) => {
       res

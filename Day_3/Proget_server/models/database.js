@@ -1,4 +1,3 @@
-const mongoose = require('mongoose');
 const Users = require('./user');
 
 module.exports.getById = (paramsId) => Users.findById({"_id": paramsId});
