@@ -1,4 +1,4 @@
-const {PORT = 9988} = process.env;
+const {PORT = 9986} = process.env;
 const express = require('express');
 const app = express();
 const server = require('http').Server(app);
@@ -16,17 +16,15 @@ io.on('connection', (client) => {
         console.log(--online);
         client.broadcast.emit("change-online", online);
     });
-    client.on("message", (message) => {
-        console.log(message);
-        client.broadcast.emit("new-message", message);
+    client.on("message", (msg) => {        
+        console.log('message: ' + msg);
+        client.broadcast.emit("message", message);
     });
     client.on("typing", (is) => {
         client.broadcast.emit("somebody-typing", is);
     })
 });
 
-
-app.use(express.static('./build'));
 server.listen(PORT, () => {
     console.log(`Server is started on port №${PORT}`);
 });
