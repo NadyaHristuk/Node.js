@@ -8,7 +8,7 @@ function test(){
 // для того чтобы сделать переменные доступны в другом модуле, необходимо добавить их в обьект exports
 // exports - объект, который возвращается функцией require
 
-exports.number = x;
+exports.x = x;
 exports.func = test;
 
 // exports = x;  // Error - значение попадает не в объект exports 

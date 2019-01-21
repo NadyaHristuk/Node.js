@@ -248,7 +248,7 @@ Mongoose позволяет нам обращаться к MongoDB с помощ
 
 Также необходимо подключиться к MongoDB (локальной или внешней):
 
-`mongoose.connect('mongodb://localhost/myappdatabase');`
+`mongoose.connect('mongodb://aaa:1235@ds241489.mlab.com:41489/test_base');`
 
 Переходим к командам.
 
@@ -403,9 +403,9 @@ var User = require('./app/models/user');
 
 // create a new user
 var newUser = User({
-  name: 'Peter Quill',
-  username: 'starlord55',
-  password: 'password',
+  name: 'Peter Quill', //req.body.name
+  username: 'starlord55',//req.body.username
+  password: 'password',//req.body.password
   admin: true
 });
 
@@ -502,7 +502,7 @@ User.findById(1, function(err, user) {
 ```javascript
 // find the user starlord55
 // update him to starlord 88
-User.findOneAndUpdate({ username: 'starlord55' }, { username: 'starlord88' }, function(err, user) {
+User.findOneAndUpdate({ username: 'starlord55' }, { username: 'starlord88' }, (err, user)=> {
   if (err) throw err;
 
   // we have the updated user returned to us
@@ -515,7 +515,7 @@ User.findOneAndUpdate({ username: 'starlord55' }, { username: 'starlord88' }, fu
 ```javascript
 // find the user with id 4
 // update username to starlord 88
-User.findByIdAndUpdate(4, { username: 'starlord88' }, function(err, user) {
+User.findByIdAndUpdate(4, { username: 'starlord88' }, (err, user) => {
   if (err) throw err;
 
   // we have the updated user returned to us
@@ -530,7 +530,7 @@ User.findByIdAndUpdate(4, { username: 'starlord88' }, function(err, user) {
 
 ```javascript
 // get the user starlord55
-User.find({ username: 'starlord55' }, function(err, user) {
+User.find({ username: 'starlord55' }, (err, user) =>{
   if (err) throw err;
 
   // delete him
@@ -546,7 +546,7 @@ User.find({ username: 'starlord55' }, function(err, user) {
 
 ```javascript
 // find the user with id 4
-User.findOneAndRemove({ username: 'starlord55' }, function(err) {
+User.findOneAndRemove({ username: 'starlord55' }, (err) => {
   if (err) throw err;
 
   // we have deleted the user
@@ -557,7 +557,7 @@ User.findOneAndRemove({ username: 'starlord55' }, function(err) {
 
 ```javascript
 // find the user with id 4
-User.findByIdAndRemove(4, function(err) {
+User.findByIdAndRemove(4, (err) =>{
   if (err) throw err;
 
   // we have deleted the user

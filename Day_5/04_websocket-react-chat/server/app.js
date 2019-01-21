@@ -1,4 +1,5 @@
-const {PORT = 9988} = process.env;
+// const {PORT = 9988} = process.env;
+const PORT = process.env.PORT || 9988;
 const express = require('express');
 const app = express();
 const server = require('http').Server(app);
