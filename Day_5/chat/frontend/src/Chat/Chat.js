@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Container, MessageHeader, Segment, Comment, Input, Button, Header, Icon} from 'semantic-ui-react';
-import moment from 'moment';
 import socket from "socket.io-client";
+import moment from 'moment';
 import uuid from "uuid/v4";
 import axios from "axios";
 window.socket = socket(window.location.origin, {
     path: "/chat/"
 }, {transports: ['websocket']});
-// const socket = io('http://localhost:3000', {transports: ['websocket']});;
+
 
 class Chat extends Component {
     state = {

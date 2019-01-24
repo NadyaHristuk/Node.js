@@ -2,7 +2,7 @@
   "name": "chat",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "i.js",
   "scripts": {
     "start": "concurrently \"cd backend && nodemon server.js\" \"cd frontend && npm start\""
   },

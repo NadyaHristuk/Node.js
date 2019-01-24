@@ -9,7 +9,10 @@ const app = express();
 
 app.use(bodyParser.json()); 
 app.use(bodyParser.urlencoded({ extended: false }))
-app.use(session({store: new FileStore(), secret: 'secret of goit', resave: false, saveUninitialized: true}));
+app.use(session({store: new FileStore(),
+   secret: 'secret of goit', 
+   resave: false, 
+   saveUninitialized: true}));
 
 // хранилище пользователей, в примере он один и хранится в объекте
 const userDB = {
