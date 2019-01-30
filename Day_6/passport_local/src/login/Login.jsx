@@ -9,66 +9,61 @@ import {
     Message,
     Icon
 } from 'semantic-ui-react';
+import axios from 'axios';
 
 class Login extends Component {
 
-    // state = {
-    //     email: '',
-    //     password: '',
-    //     errors: [],
-    // }
+    state = {
+        email: '',
+        password: '',
+        data: [],
+        secret: ''        
+    }
 
-    // handlerChange = (evt) => {
-    //     let value = evt.target.value;
-    //     let name = evt.target.name;
-    //     this.setState({
-    //         [name]: value,
-    //     }) 
-    // }
+    handlerChange = (evt) => {       
+        this.setState({
+            [evt.target.name]: evt.target.value,
+        }) 
+    }
 
-    // isFormEmpty = ({email, password}) => {
-    //     return !email.length > 0 || !password.length > 0
-    // }
+    componentDidMount(){
+        axios.get('http://localhost:3000/')
+            .then(res => {
+                this.setState({
+                data: res.data,
+            })
+        })
+            .catch(err=> console.log(err))
+    }  
 
-    // isFormValid = () => {
-    //     let errors = [];
-    //     let error;
-    //     if (this.isFormEmpty(this.state)) {
-    //         error = {
-    //             message: 'Fill in all fields'
-    //         };
-    //         this.setState({
-    //             errors: errors.concat(error)
-    //         })
-    //         return false;
-    //     } else {
-    //         this.setState({
-    //             errors: []
-    //         })
-    //         return true;
-    //     }
-    // }
+    funcPostData = (e) => {
+        e.preventDefault();
+        axios.post('http://localhost:3000/login',{
+            email: this.state.email,
+            password: this.state.password
+        })
+        .then(res => {
+            this.setState({
+                data: res.data,
+                email: '',
+                password: ''
+            })
+            .catch(err=> console.log(err))
+        })
+    }
 
-    // handleSubmit = (evt) => {
-    //     evt.preventDefault();
-    //     if (this.isFormValid()) {
-    //         firebase
-    //         .auth()
-    //         .signInWithEmailAndPassword(this.state.email, this.state.password)
-    //         .then(signedUser => {
-    //             console.log(signedUser);
-    //         })
-    //         .catch(err => {
-    //             console.error(err);
-    //             this.setState({ errors: this.state.errors.concat(err)})
-    //     })
-    //     }
-    // }
+    funcGetSecret = () =>{
+        axios.get('http://localhost:3000/secret')
+            .then(res => {
+                this.setState({
+                secret: res.data,
+            })
+        })
+            .catch(err=> console.log(err))
+    }
+    
 
-    // handleInput = (errors, inputName) => {
-    //     return errors.some(el => el.message.toLowerCase().includes(inputName)) ? 'error' : '';
-    // }
-
+   
     render() {
         return (
             <Grid textAlign='center' verticalAlign='middle' className='app'>
@@ -82,28 +77,15 @@ class Login extends Component {
                     <Form size='large' onSubmit={this.props.funcLogin}>
                         <Segment stacked>
                             
-                            {/* <Form.Input 
-                            fluid
-                            name='user'
-                            icon='user'
-                            iconPosition='left'
-                            placeholder="Enter Username"
-                            type='text'
-                            onChange={this.props.handlerChange}
-                            value={this.props.user}
-                            required
-                            autoFocus
-                            /> */}
-
-                            <Form.Input 
+                                                    <Form.Input 
                             fluid
                             name='email'
                             icon='mail'
                             iconPosition='left'
                             placeholder="Enter email"
                             type='email'
-                            onChange={this.props.handlerChange}
-                            value={this.props.email}
+                            onChange={this.handlerChange}
+                            value={this.state.name}
                             required
                             autoFocus
                             />
@@ -115,8 +97,8 @@ class Login extends Component {
                             iconPosition='left'
                             placeholder='Password'
                             type='password'
-                            onChange={this.props.handlerChange}
-                            value={this.props.password}
+                            onChange={this.handlerChange}
+                            value={this.state.password}
                             required
                             />
 
@@ -129,16 +111,17 @@ class Login extends Component {
 
                     {this.props.error &&
                         <Message>
-                        {this.props.error}
+                        {this.props.data}
                         </Message> }
 
-                    
-                    {/* {this.props.error > 0 && (
-                        <Message error>
-                            <h3>{this.props.error}</h3>
-                            {this.props.error.map(el => <p key={el.message}>{el.message}</p>)}
+                        <Button onClick={this.funcGetSecret} type='submit' color='green' fluid size='large'>
+                                Secret
+                            </Button>
+                    {this.props.secret  && 
+                        <Message>
+                            {this.props.secret}                           
                         </Message>
-                    )} */}
+                   }
 
                         <Message>
                             Don't have an account?

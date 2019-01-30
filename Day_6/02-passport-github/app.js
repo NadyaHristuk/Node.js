@@ -11,7 +11,7 @@ const MongoStore = require('connect-mongo')(session);
 const passport = require('passport');
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://admin:567234a@ds135537.mlab.com:35537/passport', {useMongoClient: true});
+mongoose.connect('mongodb://root:567234@ds121965.mlab.com:21965/it651', {useMongoClient: true});
 require('./models/user');
 
 var app = express();

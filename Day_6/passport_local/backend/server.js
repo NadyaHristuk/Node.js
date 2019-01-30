@@ -62,7 +62,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.get('/', (req, res) => {
-  res.send('Это главная страница');
+  res.json('Это главная страница');
 });
 
 app.get('/login', (req, res) => {
@@ -88,7 +88,6 @@ app.get('/secret', (req, res) => {
     res.send('Вы прошли авторизацию и оказались на закрытой странице');
   } else {
     res
-      .status(403)
       .send('Доступ запрещен');
   }
 });

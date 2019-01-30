@@ -9,7 +9,8 @@ const config = require('./config/config');
 const routerCats = require('./routes/cats');
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://bc7:123qwe@ds241489.mlab.com:41489/test_base', {useMongoClient: true});
+// mongoose.connect('mongodb://bc7:123qwe@ds241489.mlab.com:41489/test_base', {useMongoClient: true});
+mongoose.connect('mongodb://admin:567234a@ds135537.mlab.com:35537/passport', {useMongoClient: true});
 
 require('./models/user');
 
@@ -31,7 +32,7 @@ app.use(session({
   resave: false,
   store: new MongoStore({mongooseConnection: mongoose.connection})
 }));
-
+require('./models/user');
 require('./config/passport-config');
 app.use(passport.initialize({userProperty: 'payload'}));
 app.use(passport.session());
@@ -61,32 +62,32 @@ app.use(passport.session());
 
 
 app.post('/token', (req, res) => {
-  if (!req.body.username || !req.body.password) {
-      res
-      .status(400)
-      .send("You need a username and password");
-      return;
-  }
+  // if (!req.body.username || !req.body.password) {
+  //     res
+  //     .status(400)
+  //     .send("You need a username and password");
+  //     return;
+  // }
+  const user = users.find();
+  // const user = users.find((u) => {
+  //     return u.login === req.body.username && u.password === req.body.password;
+  // });
 
-  const user = users.find((u) => {
-      return u.login === req.body.username && u.password === req.body.password;
-  });
+  // if (!user) {
+  //     res
+  //     .status(401)
+  //     .send("User not found");
+  //     return;
+  // }
 
-  if (!user) {
-      res
-      .status(401)
-      .send("User not found");
-      return;
-  }
-
-  const token = jwt.sign({
-      sub: user.id,
-      username: user.username
-  }, "mysupersecretkey", {expiresIn: "3 hours"});
+  // const token = jwt.sign({
+  //     sub: user.id,
+  //     username: user.username
+  // }, "mysupersecretkey", {expiresIn: "3 hours"});
 
   res
   .status(200)
-  .send({access_token: token});
+  .send(user);
 });
 
 app.use('/api/cats', routerCats);
@@ -104,6 +105,6 @@ app.use((err, req, res, next) => {
     .json({err: '500'});
 })
 
-app.listen(3000, function () {
+app.listen(3001, function () {
   console.log('Server running. Use our API');
 })
