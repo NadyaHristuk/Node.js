@@ -1,11 +1,13 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const ctrlUsers = require('../controllers/user');
+const ctrlUsers = require("../controllers/user");
 
-router.get('/', (req,res) => res.send("Hello! from API") );
+router.delete("/:id", ctrlUsers.delUser);
 
-router.get('/:id', ctrlUsers.getUser);
+router.get("/", ctrlUsers.getAllUsers);
 
-router.post('/', ctrlUsers.addUser);
+router.get("/:id", ctrlUsers.getUser);
+
+router.post("/", ctrlUsers.addUser);
 
 module.exports = router;
