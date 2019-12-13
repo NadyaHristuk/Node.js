@@ -8,6 +8,7 @@ router.get("/", ctrlUsers.getAllUsers);
 
 router.get("/:id", ctrlUsers.getUser);
 
-router.post("/", ctrlUsers.addUser);
+router.post("/reg", ctrlUsers.addUser);
+router.post("/auth", ctrlUsers.addUser);
 
 module.exports = router;
