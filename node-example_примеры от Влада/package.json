@@ -1,0 +1,21 @@
+{
+  "name": "example",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "",
+    "develop": "supervisor -n app.js ",
+    "seed": "node seed.js --debug"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.3.2",
+    "color-logger": "0.0.6",
+    "jsdom": "^11.7.0",
+    "winston": "^3.0.0-rc3"
+  }
+}
